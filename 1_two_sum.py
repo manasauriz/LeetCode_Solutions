@@ -11,11 +11,3 @@ class Solution:
             elif sum > target:
                 first = 0
                 last -= 1
-
-    def half(self, iter):
-        l = len(iter)
-        if l == 2:
-            return 0
-        if l == 3:
-            return 1
-        return int(l/2) if l % 2 == 0 else int((l - 1)/2)
