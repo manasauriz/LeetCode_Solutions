@@ -1,5 +1,5 @@
 class Solution:
-    def maxArea(self, height) -> int:
+    def maxArea(self, height: List[int]) -> int:
         l, r = 0, len(height) - 1 # left and right pointers
         max = 0
 
@@ -13,4 +13,4 @@ class Solution:
                 r -= 1
             max = cur if cur > max else max
 
-        return max
+        return max  
