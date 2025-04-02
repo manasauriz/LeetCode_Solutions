@@ -9,7 +9,7 @@ class Solution:
         if not list1 and not list2: return
 
         # recursive cases
-        if not list1: return ListNode(list2.val, self.mergeTwoLists(None, list2.next))
-        if not list2: return ListNode(list1.val, self.mergeTwoLists(list1.next, None))
+        if not list1: return list2
+        if not list2: return list1
         if list1.val <= list2.val: return ListNode(list1.val, self.mergeTwoLists(list1.next, list2))
         return ListNode(list2.val, self.mergeTwoLists(list1, list2.next))
